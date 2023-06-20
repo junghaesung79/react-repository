@@ -1,13 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {CatImage} from '../components/cat-image'
 
-function CatImage() {
-    return (
-    <>
-    <div></div>
-    </>
-    )
-}
 
 function Main() {
     return (
@@ -16,4 +10,3 @@ function Main() {
 }
 
 export default Main;
-export {CatImage};

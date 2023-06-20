@@ -1,17 +1,39 @@
-import React from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Main from './Main';
-import Login from './Login';
-import Register from './Register';
+import * as React from "react";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
+import './App.css';
+import LoginApp from "./apps/LoginApp/routes/LoginApp";
+import BullsAndCows from "./apps/BullsAndCows/routes/BullsAndCows";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <div>
+        <h1>해성 Apps</h1>
+        <div><Link to="login">Login App</Link></div>
+        <div><Link to="bac">Bulls and Cows App</Link></div>
+      </div>
+    ),
+  },
+  {
+    path: "login",
+    element: <LoginApp />,
+  },
+  {
+    path: "bac",
+    element: <BullsAndCows />,
+  },
+])
 
 function App() {
   return (
-    <div className='App'>
-      <BrowserRouter>
-        <Route path='/' element={<Main />}></Route>
-        <Route path='/login' element={<Login />}></Route>
-        <Route path='/register' element={<Register />}></Route>
-      </BrowserRouter>
+    <div class="app">
+      <RouterProvider router={router} />
     </div>
   );
 }
