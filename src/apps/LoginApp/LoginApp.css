@@ -1,3 +1,23 @@
+.signup-btn-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-btn-box > * {
+  width: 200px;
+  height: 60px;
+  margin: 10px;
+  border: 1px;
+  border-radius: 10px;
+  background-color: rgb(113, 86, 192);
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .cat-image-container {
   display: flex;
   flex-direction: column;

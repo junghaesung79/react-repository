@@ -18,4 +18,4 @@ function CatImage() {
   )
 }
 
-export {CatImage};
+export default CatImage;
