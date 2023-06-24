@@ -1,10 +1,21 @@
-.signup-btn-box {
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* LoginApp */
+.inup-btn-box {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.signup-btn-box > * {
+.link-style {
+  text-decoration: inherit;
+  color: white;
+}
+
+.link-style > * {
   width: 200px;
   height: 60px;
   margin: 10px;
@@ -12,12 +23,39 @@
   border-radius: 10px;
   background-color: rgb(113, 86, 192);
   font-size: 20px;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Login */
+.login-function-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-function {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-input-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-input-box > * {
+  margin-bottom: 5px;
+}
+
+.login-login-submit-btn {
+  margin-top: 5px
+}
+
+/* SignUp */
+
+/* component */
 .cat-image-container {
   display: flex;
   flex-direction: column;

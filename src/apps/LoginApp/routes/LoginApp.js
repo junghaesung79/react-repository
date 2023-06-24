@@ -5,11 +5,11 @@ import CatImage from '../components/cat-image';
 
 function LoginApp() {
   return (
-  <div>
+  <div className='container'>
     <CatImage />
-    <div className="signup-btn-box">
-      <div><Link to="login">Login</Link></div>
-      <div><Link to="signup">SignUp</Link></div>
+    <div className="inup-btn-box">
+      <Link to="login" className="link-style"><div>Login</div></Link>
+      <Link to="signup" className="link-style"><div>SignUp</div></Link>
     </div>
   </div>
   );

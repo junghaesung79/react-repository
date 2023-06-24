@@ -1,8 +1,9 @@
 import React from 'react';
+import '../LoginApp.css';
 
 function SignUp() {
     return (
-        <div>Sign Up</div>
+        <div className='container'>Sign Up</div>
     );
 }
 
