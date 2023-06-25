@@ -9,8 +9,8 @@ function Login() {
     <div className='login-function-container'>
       <div className='login-function'>
         <div className='login-input-box'>
-          <input type='text' className='login-id-input'/>
-          <input type='password' className='login-password-input'/>
+          <input type='text' className='login-input-id'/>
+          <input type='password' className='login-input-password'/>
         </div>
         <button className='login-login-submit-btn'>로그인</button>
       </div>

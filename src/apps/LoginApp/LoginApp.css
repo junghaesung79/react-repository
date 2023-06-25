@@ -54,6 +54,48 @@
 }
 
 /* SignUp */
+/* signup-function-container
+signup-function
+signup-input-box
+signup-input-id
+signup-input-pw
+signup-input-pw-check
+signup-input-student-id
+signup-major
+signup-input-phone-number
+signup-submit-btn-box
+signup-submit-btn
+signup-cancel-btn */
+
+.signup-function-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-function {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-input-box > * {
+  margin-top: 5px;
+}
+
+.signup-submit-btn-box{
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 /* component */
 .cat-image-container {
