@@ -3,7 +3,7 @@ body {
   border: 0;
 }
 
-#root * :not(.container) {
+#root * :not(.container , .hamji-navigation *) {
   border: 1px solid black;
 }
 
@@ -25,12 +25,27 @@ hamji-main-content-contents
 hamji-main-sider
 hamji-main-sider-header
 hamji-main-sider-header
+
+#1C6B80
+#F2DA58
+#F3CC59
+#F4A171
+#DD6E55
  */
 /* / */
+:root {
+  --hamji-blue: #1C6B80;
+  --hamji-yellow: #F2DA58;
+  --hamji-orange: #F3CC59;
+  --hamji-salmon: #F4A171;
+  --hamji-coral: #DD6E55;
+
+}
 
 .hamji-navigation {
   width: 220px;
   padding: 12px 12px 20px 12px;
+  position: relative;
 }
 
 @media (max-width: 1280px) {
@@ -45,14 +60,54 @@ hamji-main-sider-header
   }
 }
 
-.hamji-navigation-logo {
-  width: 100%;
-  height: 80px;
-}
-
 .hamji-navigation-buttons {
   width: 100%;
-  height: 500px;
+  height: 100%;
+  position: relative;
+
+}
+
+.hamji-navigation-button {
+  width: 100%;;
+  margin-left: -1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hamji-navigation-buttons-logo {
+  width: 100%;;
+  height: 90px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hamji-navigation-buttons-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hamji-navigation-buttons-main * {
+  width: 100%;
+  height: 35px; 
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 7px;
+}
+
+.hamji-navigation-buttons-more {
+  height: 35px;
+  position: absolute;
+  bottom: 6px;
+}
+
+@media (max-height: 372px) {
+  .hamji-navigation-buttons-more{
+    position: static;
+  }
 }
 
 .hamji-main {
