@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  border: 0;
+}
+
+#root * :not(.container) {
+  border: 1px solid black;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+/* 
+container
+hamji-navigation
+hamji-navigation-logo
+hamji-navigation-buttons
+hamji-main 
+hamji-main-content
+hamji-main-content-header
+hamji-main-content-contents
+hamji-main-sider
+hamji-main-sider-header
+hamji-main-sider-header
+ */
+/* / */
+
+.hamji-navigation {
+  width: 220px;
+  padding: 12px 12px 20px 12px;
+}
+
+@media (max-width: 1280px) {
+  .hamji-navigation {
+    width: 48px;
+  }
+}
+
+@media (max-width: 720px) {
+  .hamji-navigation {
+    display: none;
+  }
+}
+
+.hamji-navigation-logo {
+  width: 100%;
+  height: 80px;
+}
+
+.hamji-navigation-buttons {
+  width: 100%;
+  height: 500px;
+}
+
+.hamji-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hamji-main-content {
+  width: 800px;
+}
+
+@media (max-width: 877px) {
+  .hamji-main {
+    width: 91%;
+  }
+  .hamji-main-content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .hamji-main {
+    width: 100%;
+  }
+  .hamji-main-content {
+    width: 100%;
+  }
+}
+
+.hamji-main-sider{
+  width: 230px;
+  padding-top: 30px;
+}
+
+@media (max-width: 1108px) {
+  .hamji-main-sider {
+    display: none;
+  }
+}
+
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */

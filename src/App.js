@@ -5,10 +5,13 @@ import {
   Link,
 } from "react-router-dom";
 import './App.css';
-import LoginApp from "./apps/LoginApp/routes/LoginApp";
+import LoginApp from "./apps/LoginApp/LoginApp";
 import Login from "./apps/LoginApp/routes/Login";
 import SignUp from "./apps/LoginApp/routes/SignUp";
 import BullsAndCows from "./apps/BullsAndCows/routes/BullsAndCows";
+import Learn from "./apps/Learn/Learn";
+// 함지 앱
+import HamjiApp from "./apps/HamjiApp/HamjiApp";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +21,8 @@ const router = createBrowserRouter([
         <h1>해성 Apps</h1>
         <div><Link to="loginapp">Login App</Link></div>
         <div><Link to="bac">Bulls and Cows App</Link></div>
+        <div><Link to="learn">Learn</Link></div>
+        <div><Link to="hamjiapp">HamjiApp</Link></div>
       </div>
     ),
   },
@@ -38,6 +43,16 @@ const router = createBrowserRouter([
   {
     path: "bac",
     element: <BullsAndCows />,
+  },
+  // 예제 풀이, 배우기
+  {
+    path: "learn",
+    element: <Learn />,
+  },
+  // 함지 앱
+  {
+    path: "hamjiapp",
+    element: <HamjiApp />,
   },
 ])
 

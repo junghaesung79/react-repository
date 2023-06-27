@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link,} from "react-router-dom";
-import '../LoginApp.css';
-import CatImage from '../components/cat-image';
+import './LoginApp.css';
+import CatImage from './components/cat-image';
 
 function LoginApp() {
   return (
