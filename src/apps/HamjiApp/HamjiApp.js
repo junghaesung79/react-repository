@@ -1,5 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './HamjiApp.css'
+import Logo from './components/NavigationButtons/Logo'
+import Notification from './components/NavigationButtons/Notification'
+import Bulletin from './components/NavigationButtons/Bulletin'
+import Cat from './components/NavigationButtons/Cat'
+import Information from './components/NavigationButtons/Information'
+import More from './components/NavigationButtons/More'
 
 // 한기대 생활관 앱(함지관 이름을 따서 함지앱)
 // 
@@ -10,14 +16,14 @@ function HamjiApp() {
     <div className='container'>
       <div className='hamji-navigation'>
         <div className='hamji-navigation-buttons'>
-          <div className='hamji-navigation-buttons-logo hamji-navigation-button'>Hamji</div>
+          <Logo />
           <div className='hamji-navigation-buttons-main'>
-            <div className='hamji-navigation-buttons-main-notification hamji-navigation-button'>공지사항</div>
-            <div className='hamji-navigation-buttons-main-bulletin hamji-navigation-button'>게시판</div>
-            <div className='hamji-navigation-buttons-main-cat hamji-navigation-button'>고양이</div>
-            <div className='hamji-navigation-buttons-main-information hamji-navigation-button'>정보</div>
+            <Notification />
+            <Bulletin />
+            <Cat />
+            <Information />
           </div>
-          <div className='hamji-navigation-buttons-more hamji-navigation-button'>더보기</div>
+          <More />
         </div>
       </div>
       <div className='hamji-main'>  
