@@ -1,6 +1,6 @@
 import React from 'react';
 import '../LoginApp.css';
-import CatImage from '../components/cat-image';
+import CatImage from '../components/Cat-image';
 
 function SignUp() {
   return <div className="container">

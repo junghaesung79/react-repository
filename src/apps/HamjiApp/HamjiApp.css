@@ -3,9 +3,9 @@ body {
   border: 0;
 }
 
-#root * :not(.container , .hamji-navigation *) {
+/* #root * :not(.container , .hamji-navigation *) {
   border: 1px solid black;
-}
+} */
 
 .container {
   width: 100%;
