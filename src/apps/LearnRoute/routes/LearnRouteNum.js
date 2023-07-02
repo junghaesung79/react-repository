@@ -9,7 +9,6 @@ function LearnNum() {
   const [colorState, setColorState] = useState('red');
   let params = useParams();
 
-
   function handlePlusButton() {
     setCount((current) => current + currentRouteNumber);
     if (count + currentRouteNumber > 9) {
@@ -22,7 +21,7 @@ function LearnNum() {
 
   useEffect(() =>{
     setCurrentRouteNumber(Number(params.id));
-  },[]);
+  },[params.id]);
 
   return(
     <div>

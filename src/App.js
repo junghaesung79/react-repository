@@ -16,7 +16,9 @@ import BullsAndCows from "./apps/BullsAndCows/routes/BullsAndCows";
 import HamjiApp from "./apps/HamjiApp/HamjiApp";
 // 루트 카운터 앱
 import LearnRoute from "./apps/LearnRoute/LearnRoute";
-import LearnNum from "./apps/LearnRoute/routes/LearnRouteNum";
+import LearnRouteNum from "./apps/LearnRoute/routes/LearnRouteNum";
+// 테스트하기 앱
+import Test from "./apps/Test/Test";
 
 function Init() {
   return (
@@ -25,7 +27,8 @@ function Init() {
       <div><Link to="loginapp">Login App</Link></div>
       <div><Link to="bac">Bulls and Cows App</Link></div>
       <div><Link to="learnroute">Route & Counter App</Link></div>
-      <div><Link to="hamjiapp">HamjiApp</Link></div>
+      <div><Link to="hamjiapp">Hamji App</Link></div>
+      <div><Link to="test">Test App</Link></div>
     </div>
   )
 }
@@ -44,9 +47,11 @@ function App() {
             <Route path="bac" element={<BullsAndCows />}></Route>
             {/* 루트 카운터 앱 */}
             <Route path="learnroute" element={<LearnRoute />}></Route>
-            <Route path="learnroute/:id" element={<LearnNum />}></Route>
+            <Route path="learnroute/:id" element={<LearnRouteNum />}></Route>
             {/* 함지 앱 */}
             <Route path="hamjiapp" element={<HamjiApp />}></Route>
+            {/* 테스트하기 앱 */}
+            <Route path="Test" element={<Test />}></Route>
           </Routes>
         </BrowserRouter>
       </div>

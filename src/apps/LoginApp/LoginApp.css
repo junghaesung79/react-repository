@@ -10,24 +10,6 @@
   align-items: center;
 }
 
-.link-style {
-  text-decoration: inherit;
-  color: white;
-}
-
-.link-style > * {
-  width: 200px;
-  height: 60px;
-  margin: 10px;
-  border: 1px;
-  border-radius: 10px;
-  background-color: rgb(113, 86, 192);
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* Login */
 .login-function-container {
   display: flex;
