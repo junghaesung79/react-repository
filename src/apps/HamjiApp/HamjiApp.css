@@ -76,11 +76,12 @@ hamji-main-sider-header
 .hamji-navigation-button {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: row
+  ;
 }
 
 .hamji-navigation-buttons-logo {
-  width: 100%;;
+  width: 100%;
   height: 90px;
   display: flex;
   flex-direction: row;
@@ -114,10 +115,10 @@ hamji-main-sider-header
 }
 
 /* hamji-navigation-buttons */
-.hamji-navigation-button img {
+/* .hamji-navigation-button img {
   width: 30px;
   height: 30px;
-}
+} */
 
 /* hamji-main */
 .hamji-main {
