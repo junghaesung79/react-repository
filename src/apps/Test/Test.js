@@ -1,14 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { styled } from "styled-components";
 
-function Testt() {
-  return (
-    <div>
-    something test
-    </div>
-  )
-}
-
 const Button = styled.button`
   width: 20px;
   height: 20px;
@@ -22,52 +14,33 @@ function Test() {
     {id: 0, checked: false, content: '체크리스트'}, 
     {id: 1, checked: true, content: 'index, check, content'},
   ])
-  const tempList = list
+  const [inputContent, setInputContent] = useState('')
   const divRef = useRef();
   function handleCheckbox(e) {
     const listIndex = e.target.value;
-    tempList[listIndex].checked = !tempList[listIndex].checked
-    setList(tempList);
+    list.map((item) => {
+      item.checked = !item.checked;
+    })
   }
   function handleRemove(e) {
     e.preventDefault();
     const target = e.target.parentNode;
     for (let i = 0; i < target.parentNode.childNodes.length; i++) {
       if(target.parentNode.childNodes[i] === target) {
-        tempList.splice(i, 1)
-        target.parentNode.removeChild(target);
+        setList(
+          list.filter(element => element.id !== i)
+        );
         break;
       }
     }
-    arrangeId();
-  }
-  function arrangeId() {
-    divRef.current.childNodes.forEach((node, index)=>{
-      tempList[index].id = index;
-      divRef.current.childNodes[index].key = index;
-    });
   }
 
-  const inputRef = useRef();
   function handleAdd(e) {
     e.preventDefault();
-    const contentToAdd = inputRef.current.value;
-    tempList.push({id: tempList.length, checked: false, content: contentToAdd});
-    setList(tempList);
-    divRef.current.append(
-    
-    
-    <div key={tempList.length}>
-      <input type="checkbox" value={tempList.length} onClick={(e)=>handleCheckbox(e)}/>
-      {contentToAdd}
-      <Button type="button" onClick={(e)=>handleRemove(e)}>x</Button>
-    </div>
-    
-    
-    )
-    console.log(tempList);
-    console.log(list);
+    setList(list => [...list, {id: list.length, checked: false, content: inputContent}]);
+    setInputContent('');
   }
+  
   useEffect(() => {
     divRef.current.childNodes.forEach((node, index)=>{
       node.childNodes[0].checked = list[index].checked;
@@ -79,16 +52,16 @@ function Test() {
         {list.map((element, index) => {
           return (
             <div key={index}>
-              <input type="checkbox" value={index} onClick={(e)=>handleCheckbox(e)}/>
+              <input type="checkbox" value={element.id} onClick={handleCheckbox}/>
               {element.content}
-              <Button type="button" onClick={(e)=>handleRemove(e)}>x</Button>
+              <Button type="button" onClick={handleRemove}>x</Button>
             </div>
           )
         })}
       </div>
       <form>
-        <input ref={inputRef} style={{width: '230px'}}/>
-        <button type="submit" onClick={(e)=>handleAdd(e)}>add</button>
+        <input style={{width: '230px'}} value={inputContent} onChange={e => setInputContent(e.target.value)}/>
+        <button type="submit" onClick={handleAdd}>add</button>
       </form>
     </div>
   )
