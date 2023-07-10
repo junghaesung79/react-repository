@@ -10,8 +10,8 @@ import './App.css';
 import LoginApp from "./apps/LoginApp/LoginApp";
 import Login from "./apps/LoginApp/routes/Login";
 import SignUp from "./apps/LoginApp/routes/SignUp";
-// 숫자야구 앱
-import BullsAndCows from "./apps/BullsAndCows/routes/BullsAndCows";
+// 예시 투두리스트
+import ExampleTodoList from "./apps/ExampleTodoList/ExampleTodoList";
 // 함지 앱
 import HamjiApp from "./apps/HamjiApp/HamjiApp";
 // 루트 카운터 앱
@@ -21,17 +21,20 @@ import LearnRouteNum from "./apps/LearnRoute/routes/LearnRouteNum";
 import RegisterApp from "./apps/RegisterApp/Register";
 // 테스트하기 앱
 import Test from "./apps/Test/Test";
+// 투두리스트 실습 앱
+import TrainingTodo from "./apps/TrainingTodo/TrainingTodo";
 
 function Init() {
   return (
     <div>
       <h1>해성 Apps</h1>
       <div><Link to="loginapp">Login App</Link></div>
-      <div><Link to="bac">Bulls and Cows App</Link></div>
+      <div><Link to="exampletodolist">Example Todo List</Link></div>
       <div><Link to="learnroute">Route & Counter App</Link></div>
       <div><Link to="hamjiapp">Hamji App</Link></div>
       <div><Link to="registerapp">Register App</Link></div>
       <div><Link to="test">Test App</Link></div>
+      <div><Link to="trainingtodo">Training Todo App</Link></div>
     </div>
   )
 }
@@ -46,8 +49,8 @@ function App() {
             <Route path="loginapp" element={<LoginApp />}></Route>
             <Route path="loginapp/login" element={<Login />}></Route>
             <Route path="loginapp/signup" element={<SignUp />}></Route>
-            {/* 숫자야구 앱 */}
-            <Route path="bac" element={<BullsAndCows />}></Route>
+            {/* 예시 투두리스트 */}
+            <Route path="exampletodolist" element={<ExampleTodoList />}></Route>
             {/* 루트 카운터 앱 */}
             <Route path="learnroute" element={<LearnRoute />}></Route>
             <Route path="learnroute/:id" element={<LearnRouteNum />}></Route>
@@ -57,6 +60,8 @@ function App() {
             <Route path="registerapp" element={<RegisterApp />}></Route>
             {/* 테스트하기 앱 */}
             <Route path="test" element={<Test />}></Route>
+            {/* 투두 실습 앱 */}
+            <Route path="trainingtodo" element={<TrainingTodo />}></Route>
           </Routes>
         </BrowserRouter>
       </div>
