@@ -19,8 +19,8 @@ import LearnRoute from "./apps/LearnRoute/LearnRoute";
 import LearnRouteNum from "./apps/LearnRoute/routes/LearnRouteNum";
 // 유저 등록 앱
 import RegisterApp from "./apps/RegisterApp/Register";
-// 테스트하기 앱
-import Test from "./apps/Test/Test";
+// LearnApi 앱
+import LearnApi from "./apps/LearnApi/LearnApi";
 // 투두리스트 실습 앱
 import TrainingTodo from "./apps/TrainingTodo/TrainingTodo";
 
@@ -33,7 +33,7 @@ function Init() {
       <div><Link to="learnroute">Route & Counter App</Link></div>
       <div><Link to="hamjiapp">Hamji App</Link></div>
       <div><Link to="registerapp">Register App</Link></div>
-      <div><Link to="test">Test App</Link></div>
+      <div><Link to="learnapi">Learn Api App</Link></div>
       <div><Link to="trainingtodo">Training Todo App</Link></div>
     </div>
   )
@@ -58,8 +58,8 @@ function App() {
             <Route path="hamjiapp" element={<HamjiApp />}></Route>
             {/* 유저 등록 앱 */}
             <Route path="registerapp" element={<RegisterApp />}></Route>
-            {/* 테스트하기 앱 */}
-            <Route path="test" element={<Test />}></Route>
+            {/* LearnApi 앱 */}
+            <Route path="test" element={<LearnApi />}></Route>
             {/* 투두 실습 앱 */}
             <Route path="trainingtodo" element={<TrainingTodo />}></Route>
           </Routes>

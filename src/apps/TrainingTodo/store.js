@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 
-const useStore = create((set)=>({
+const useStore = create((set) => ({
   taskList: [{
     id: 0,
     title: 'Example task 1',
