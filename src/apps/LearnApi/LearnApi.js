@@ -40,7 +40,7 @@ function Loading() {
   )
 }
 
-function LearnApi() {
+function TaskList() {
   const { taskList, fetchTasks } = useStore();
   useEffect(() => {
     axios.get(api, {

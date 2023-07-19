@@ -23,6 +23,8 @@ import RegisterApp from "./apps/RegisterApp/Register";
 import LearnApi from "./apps/LearnApi/LearnApi";
 // 투두리스트 실습 앱
 import TrainingTodo from "./apps/TrainingTodo/TrainingTodo";
+// 고양이 렌더링 앱
+import CatRendering from "./apps/CatRendering/CatRendering";
 
 function Init() {
   return (
@@ -35,6 +37,7 @@ function Init() {
       <div><Link to="registerapp">Register App</Link></div>
       <div><Link to="learnapi">Learn Api App</Link></div>
       <div><Link to="trainingtodo">Training Todo App</Link></div>
+      <div><Link to="catrendering">Cat Rendering App</Link></div>
     </div>
   )
 }
@@ -59,9 +62,11 @@ function App() {
             {/* 유저 등록 앱 */}
             <Route path="registerapp" element={<RegisterApp />}></Route>
             {/* LearnApi 앱 */}
-            <Route path="test" element={<LearnApi />}></Route>
+            <Route path="learnapi" element={<LearnApi />}></Route>
             {/* 투두 실습 앱 */}
             <Route path="trainingtodo" element={<TrainingTodo />}></Route>
+            {/* 고양이 렌더링 앱 */}
+            <Route path="catrendering" element={<CatRendering />}></Route>
           </Routes>
         </BrowserRouter>
       </div>
